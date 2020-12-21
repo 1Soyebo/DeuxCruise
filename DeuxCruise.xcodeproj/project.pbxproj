@@ -14,9 +14,11 @@
 		2B85C1E72590EADF0033D4F8 /* DeuxCruise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B85C1E52590EADF0033D4F8 /* DeuxCruise.xcdatamodeld */; };
 		2B85C1E92590EAE30033D4F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B85C1E82590EAE30033D4F8 /* Assets.xcassets */; };
 		2B85C1EC2590EAE30033D4F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B85C1EA2590EAE30033D4F8 /* LaunchScreen.storyboard */; };
+		ABC7F9A35898AA5EC3AFD773 /* Pods_DeuxCruise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4ABA7988247A8FC198F567C /* Pods_DeuxCruise.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1705D32D787FE11FDE191264 /* Pods-DeuxCruise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeuxCruise.release.xcconfig"; path = "Target Support Files/Pods-DeuxCruise/Pods-DeuxCruise.release.xcconfig"; sourceTree = "<group>"; };
 		2B85C1D92590EADF0033D4F8 /* DeuxCruise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeuxCruise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B85C1DC2590EADF0033D4F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B85C1DE2590EADF0033D4F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		2B85C1E82590EAE30033D4F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B85C1EB2590EAE30033D4F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B85C1ED2590EAE30033D4F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		899EE769F76A3650698626AF /* Pods-DeuxCruise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeuxCruise.debug.xcconfig"; path = "Target Support Files/Pods-DeuxCruise/Pods-DeuxCruise.debug.xcconfig"; sourceTree = "<group>"; };
+		D4ABA7988247A8FC198F567C /* Pods_DeuxCruise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeuxCruise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC7F9A35898AA5EC3AFD773 /* Pods_DeuxCruise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				2B85C1DB2590EADF0033D4F8 /* DeuxCruise */,
 				2B85C1DA2590EADF0033D4F8 /* Products */,
+				4DF379D29242A895DC6132AD /* Pods */,
+				4DD24FA97910208535E645B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,24 @@
 			path = DeuxCruise;
 			sourceTree = "<group>";
 		};
+		4DD24FA97910208535E645B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4ABA7988247A8FC198F567C /* Pods_DeuxCruise.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DF379D29242A895DC6132AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				899EE769F76A3650698626AF /* Pods-DeuxCruise.debug.xcconfig */,
+				1705D32D787FE11FDE191264 /* Pods-DeuxCruise.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B85C1F02590EAE30033D4F8 /* Build configuration list for PBXNativeTarget "DeuxCruise" */;
 			buildPhases = (
+				58D51A864C494EE6B00439D2 /* [CP] Check Pods Manifest.lock */,
 				2B85C1D52590EADF0033D4F8 /* Sources */,
 				2B85C1D62590EADF0033D4F8 /* Frameworks */,
 				2B85C1D72590EADF0033D4F8 /* Resources */,
@@ -134,6 +160,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58D51A864C494EE6B00439D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeuxCruise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B85C1D52590EADF0033D4F8 /* Sources */ = {
@@ -287,6 +338,7 @@
 		};
 		2B85C1F12590EAE30033D4F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 899EE769F76A3650698626AF /* Pods-DeuxCruise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +358,7 @@
 		};
 		2B85C1F22590EAE30033D4F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1705D32D787FE11FDE191264 /* Pods-DeuxCruise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
