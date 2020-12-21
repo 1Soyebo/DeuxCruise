@@ -1,3 +1,47 @@
-PODFILE CHECKSUM: b436ec5c5e07b9a23b323d92c308550595b8117f
+PODS:
+  - MaterialComponents/AnimationTiming (119.3.0)
+  - MaterialComponents/Availability (119.3.0)
+  - MaterialComponents/private/Math (119.3.0)
+  - "MaterialComponents/private/TextControlsPrivate+BaseStyle (119.3.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle (119.3.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+Shared (119.3.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/TextControls+Enums"
+  - "MaterialComponents/private/TextControlsPrivate+TextFields (119.3.0)":
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/TextControls+BaseTextFields (119.3.0)":
+    - "MaterialComponents/private/TextControlsPrivate+BaseStyle"
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+    - "MaterialComponents/private/TextControlsPrivate+TextFields"
+    - MDFInternationalization
+  - "MaterialComponents/TextControls+Enums (119.3.0)"
+  - "MaterialComponents/TextControls+OutlinedTextFields (119.3.0)":
+    - MaterialComponents/Availability
+    - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle"
+    - "MaterialComponents/TextControls+BaseTextFields"
+  - MDFInternationalization (2.0.0)
+
+DEPENDENCIES:
+  - "MaterialComponents/TextControls+OutlinedTextFields"
+
+SPEC REPOS:
+  trunk:
+    - MaterialComponents
+    - MDFInternationalization
+
+SPEC CHECKSUMS:
+  MaterialComponents: 49658f0fd7ef6e098e9943fce3f293e700595570
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+
+PODFILE CHECKSUM: 73718aaa9c0399ef32f7b77d9777f8cf7e0c836c
 
 COCOAPODS: 1.10.0

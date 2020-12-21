@@ -6,5 +6,6 @@ target 'DeuxCruise' do
   use_frameworks!
 
   # Pods for DeuxCruise
+  pod 'MaterialComponents/TextControls+OutlinedTextFields'
 
 end
