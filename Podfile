@@ -8,6 +8,7 @@ target 'DeuxCruise' do
   # Pods for DeuxCruise
   pod 'MaterialComponents/TextControls+OutlinedTextFields'
   pod 'SwiftValidator'
+  pod 'SwiftyJSON'
 
 
 end

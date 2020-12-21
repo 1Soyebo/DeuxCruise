@@ -30,22 +30,26 @@ PODS:
     - "MaterialComponents/TextControls+BaseTextFields"
   - MDFInternationalization (2.0.0)
   - SwiftValidator (3.0.3)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - "MaterialComponents/TextControls+OutlinedTextFields"
   - SwiftValidator
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - MaterialComponents
     - MDFInternationalization
     - SwiftValidator
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   MaterialComponents: 49658f0fd7ef6e098e9943fce3f293e700595570
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   SwiftValidator: 0b6a48bf10364411b0d64c97f78665ff87ca9f8b
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: e1d7974a880d5d9dc2951f7fbcb00f1aefba5a11
+PODFILE CHECKSUM: 2c9a2904517018c08ac10272e1812dd53829f3fe
 
 COCOAPODS: 1.10.0
