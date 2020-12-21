@@ -29,19 +29,23 @@ PODS:
     - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle"
     - "MaterialComponents/TextControls+BaseTextFields"
   - MDFInternationalization (2.0.0)
+  - SwiftValidator (3.0.3)
 
 DEPENDENCIES:
   - "MaterialComponents/TextControls+OutlinedTextFields"
+  - SwiftValidator
 
 SPEC REPOS:
   trunk:
     - MaterialComponents
     - MDFInternationalization
+    - SwiftValidator
 
 SPEC CHECKSUMS:
   MaterialComponents: 49658f0fd7ef6e098e9943fce3f293e700595570
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  SwiftValidator: 0b6a48bf10364411b0d64c97f78665ff87ca9f8b
 
-PODFILE CHECKSUM: 73718aaa9c0399ef32f7b77d9777f8cf7e0c836c
+PODFILE CHECKSUM: e1d7974a880d5d9dc2951f7fbcb00f1aefba5a11
 
 COCOAPODS: 1.10.0
