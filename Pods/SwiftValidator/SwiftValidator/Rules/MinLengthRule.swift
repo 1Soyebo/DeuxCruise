@@ -28,7 +28,7 @@ public class MinLengthRule: Rule {
      */
     public init(length: Int, message : String = "Must be at least %ld characters long"){
         self.DEFAULT_LENGTH = length
-        self.message = NSString(format: message, self.DEFAULT_LENGTH) as String
+        self.message = NSString(format: message as NSString, self.DEFAULT_LENGTH) as String
     }
     
     /**
@@ -37,7 +37,7 @@ public class MinLengthRule: Rule {
      - returns: A boolean value. True if validation is successful; False if validation fails.
      */
     public func validate(value: String) -> Bool {
-        return value.characters.count >= DEFAULT_LENGTH
+        return value.count >= DEFAULT_LENGTH
     }
     
     /**

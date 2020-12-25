@@ -38,7 +38,7 @@ public class ValidationRule {
      - returns: `ValidationError` object if at least one error is found. Nil is returned if there are no validation errors.
      */
     public func validateField() -> ValidationError? {
-        return rules.filter{ !$0.validate(self.textField.text ?? "") }
+        return rules.filter{ !$0.validate(value: self.textField.text ?? "") }
                     .map{ rule -> ValidationError in return ValidationError(textField: self.textField, errorLabel:self.errorLabel, error: rule.errorMessage()) }.first
     }
 }

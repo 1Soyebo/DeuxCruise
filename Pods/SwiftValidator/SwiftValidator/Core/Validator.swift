@@ -18,9 +18,9 @@ public class Validator {
     /// Dictionary to hold fields (and accompanying errors) that were unsuccessfully validated.
     public var errors = [UITextField:ValidationError]()
      /// Variable that holds success closure to display positive status of field.
-    private var successStyleTransform:((validationRule:ValidationRule)->Void)?
+    private var successStyleTransform:((_ validationRule:ValidationRule)->Void)?
     /// Variable that holds error closure to display negative status of field.
-    private var errorStyleTransform:((validationError:ValidationError)->Void)?
+    private var errorStyleTransform:((_ validationError:ValidationError)->Void)?
     /// - returns: An initialized object, or nil if an object could not be created for some reason that would not result in an exception.
     public init(){}
     
@@ -41,13 +41,13 @@ public class Validator {
                 
                 // let the user transform the field if they want
                 if let transform = self.errorStyleTransform {
-                    transform(validationError: error)
+                    transform(error)
                 }
             } else {
                 // No error
                 // let the user transform the field if they want
                 if let transform = self.successStyleTransform {
-                    transform(validationRule: rule)
+                    transform(rule)
                 }
             }
         }
@@ -61,22 +61,22 @@ public class Validator {
     - parameter textField: Holds validator field data.
     - returns: No return value.
     */
-    public func validateField(textField: UITextField, callback: (error:ValidationError?) -> Void){
+    public func validateField(textField: UITextField, callback: (_ error:ValidationError?) -> Void){
         if let fieldRule = validations[textField] {
             if let error = fieldRule.validateField() {
                 errors[textField] = error
                 if let transform = self.errorStyleTransform {
-                    transform(validationError: error)
+                    transform(error)
                 }
-                callback(error: error)
+                callback(error)
             } else {
                 if let transform = self.successStyleTransform {
-                    transform(validationRule: fieldRule)
+                    transform(fieldRule)
                 }
-                callback(error: nil)
+                callback(nil)
             }
         } else {
-            callback(error: nil)
+            callback(nil)
         }
     }
     
@@ -89,7 +89,7 @@ public class Validator {
     - parameter error: A closure which is called with validationError, an object that holds validation error data
     - returns: No return value
     */
-    public func styleTransformers(success success:((validationRule:ValidationRule)->Void)?, error:((validationError:ValidationError)->Void)?) {
+    public func styleTransformers(success:((_ validationRule:ValidationRule)->Void)?, error:((_ validationError:ValidationError)->Void)?) {
         self.successStyleTransform = success
         self.errorStyleTransform = error
     }
@@ -124,8 +124,8 @@ public class Validator {
      - returns: No return value
      */
     public func unregisterField(textField:UITextField) {
-        validations.removeValueForKey(textField)
-        errors.removeValueForKey(textField)
+        validations.removeValue(forKey: textField)
+        errors.removeValue(forKey: textField)
     }
     
     /**
@@ -140,7 +140,7 @@ public class Validator {
         if errors.isEmpty {
             delegate.validationSuccessful()
         } else {
-            delegate.validationFailed(errors)
+            delegate.validationFailed(errors: errors)
         }
         
     }
@@ -152,10 +152,10 @@ public class Validator {
      
      - returns: No return value.
      */
-    public func validate(callback:(errors:[UITextField:ValidationError])->Void) -> Void {
+    public func validate(callback:(_ errors:[UITextField:ValidationError])->Void) -> Void {
         
         self.validateAllFields()
         
-        callback(errors: errors)
+        callback(errors)
     }
 }
