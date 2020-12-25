@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		2B85C1E72590EADF0033D4F8 /* DeuxCruise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B85C1E52590EADF0033D4F8 /* DeuxCruise.xcdatamodeld */; };
 		2B85C1E92590EAE30033D4F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B85C1E82590EAE30033D4F8 /* Assets.xcassets */; };
 		2B85C1EC2590EAE30033D4F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B85C1EA2590EAE30033D4F8 /* LaunchScreen.storyboard */; };
+		2BF2B024259685CF00D21AB2 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2B022259685CF00D21AB2 /* AnimationViewController.swift */; };
+		2BF2B025259685CF00D21AB2 /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF2B023259685CF00D21AB2 /* AnimationViewController.xib */; };
 		ABC7F9A35898AA5EC3AFD773 /* Pods_DeuxCruise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4ABA7988247A8FC198F567C /* Pods_DeuxCruise.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		2B85C1E82590EAE30033D4F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B85C1EB2590EAE30033D4F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B85C1ED2590EAE30033D4F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BF2B022259685CF00D21AB2 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		2BF2B023259685CF00D21AB2 /* AnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
 		899EE769F76A3650698626AF /* Pods-DeuxCruise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeuxCruise.debug.xcconfig"; path = "Target Support Files/Pods-DeuxCruise/Pods-DeuxCruise.debug.xcconfig"; sourceTree = "<group>"; };
 		D4ABA7988247A8FC198F567C /* Pods_DeuxCruise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeuxCruise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,6 +77,8 @@
 				2B85C1EA2590EAE30033D4F8 /* LaunchScreen.storyboard */,
 				2B85C1ED2590EAE30033D4F8 /* Info.plist */,
 				2B85C1E52590EADF0033D4F8 /* DeuxCruise.xcdatamodeld */,
+				2BF2B022259685CF00D21AB2 /* AnimationViewController.swift */,
+				2BF2B023259685CF00D21AB2 /* AnimationViewController.xib */,
 			);
 			path = DeuxCruise;
 			sourceTree = "<group>";
@@ -91,7 +97,6 @@
 				899EE769F76A3650698626AF /* Pods-DeuxCruise.debug.xcconfig */,
 				1705D32D787FE11FDE191264 /* Pods-DeuxCruise.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,6 +162,7 @@
 				2B85C1EC2590EAE30033D4F8 /* LaunchScreen.storyboard in Resources */,
 				2B85C1E92590EAE30033D4F8 /* Assets.xcassets in Resources */,
 				2B85C1E42590EADF0033D4F8 /* Main.storyboard in Resources */,
+				2BF2B025259685CF00D21AB2 /* AnimationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +217,7 @@
 			files = (
 				2B85C1E72590EADF0033D4F8 /* DeuxCruise.xcdatamodeld in Sources */,
 				2B85C1E12590EADF0033D4F8 /* ViewController.swift in Sources */,
+				2BF2B024259685CF00D21AB2 /* AnimationViewController.swift in Sources */,
 				2B85C1DD2590EADF0033D4F8 /* AppDelegate.swift in Sources */,
 				2B85C1DF2590EADF0033D4F8 /* SceneDelegate.swift in Sources */,
 			);

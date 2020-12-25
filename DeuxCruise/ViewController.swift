@@ -19,10 +19,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtConfirmPassword: MDCOutlinedTextField!
     
     let validator = Validator()
+    
+    var array_text_fields: [MDCOutlinedTextField] {
+        return [txtPassword, txtUsername, txtLastname, txtFirstname, txtConfirmPassword]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+
         self.title = "Sign Up"
+        
+        array_text_fields.forEach({
+            $0.label.text = $0.placeholder
+            $0.setLeadingAssistiveLabelColor(.red, for: .normal)
+        })
         
         validator.registerField(textField: txtFirstname, errorLabel: txtFirstname.leadingAssistiveLabel, rules: [RequiredRule()])
         validator.registerField(textField: txtLastname, errorLabel: txtLastname.leadingAssistiveLabel, rules: [RequiredRule()])
@@ -33,10 +44,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.viewWillAppear(animated)
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        self.viewDidAppear(animated)
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
+//    }
+    
+    
     
     @IBAction func btnSignUpPressed(_ sender: Any) {
         validator.validate(delegate: self)
@@ -48,7 +61,7 @@ class ViewController: UIViewController {
 extension ViewController: ValidationDelegate{
     
     func validationSuccessful() {
-        <#code#>
+        self.navigationController?.pushViewController(AnimationViewController(nibName: "AnimationViewController", bundle: nil), animated: true)
     }
     
     func validationFailed(errors: [UITextField : ValidationError]) {
