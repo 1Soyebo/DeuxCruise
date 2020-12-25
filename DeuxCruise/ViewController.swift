@@ -41,13 +41,15 @@ class ViewController: UIViewController {
         validator.registerField(textField: txtPassword, errorLabel: txtPassword.leadingAssistiveLabel, rules: [RequiredRule(), PasswordRule()])
         validator.registerField(textField: txtConfirmPassword, errorLabel: txtConfirmPassword.leadingAssistiveLabel, rules: [RequiredRule(), ConfirmationRule.init(confirmField: txtPassword)])
 
+        self.navigationController?.pushViewController(AnimationViewController(nibName: "AnimationViewController", bundle: nil), animated: true)
+
         // Do any additional setup after loading the view.
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        self.viewDidAppear(animated)
-//        self.navigationController?.navigationBar.prefersLargeTitles = true
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
     
     
     
