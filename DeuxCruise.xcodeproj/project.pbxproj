@@ -14,6 +14,8 @@
 		2B85C1E72590EADF0033D4F8 /* DeuxCruise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B85C1E52590EADF0033D4F8 /* DeuxCruise.xcdatamodeld */; };
 		2B85C1E92590EAE30033D4F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B85C1E82590EAE30033D4F8 /* Assets.xcassets */; };
 		2B85C1EC2590EAE30033D4F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B85C1EA2590EAE30033D4F8 /* LaunchScreen.storyboard */; };
+		2BDD48E025990AEB005A5129 /* CruiseUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDD48DE25990AEB005A5129 /* CruiseUser+CoreDataClass.swift */; };
+		2BDD48E125990AEB005A5129 /* CruiseUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDD48DF25990AEB005A5129 /* CruiseUser+CoreDataProperties.swift */; };
 		2BF2B024259685CF00D21AB2 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2B022259685CF00D21AB2 /* AnimationViewController.swift */; };
 		2BF2B025259685CF00D21AB2 /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF2B023259685CF00D21AB2 /* AnimationViewController.xib */; };
 		ABC7F9A35898AA5EC3AFD773 /* Pods_DeuxCruise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4ABA7988247A8FC198F567C /* Pods_DeuxCruise.framework */; };
@@ -30,6 +32,8 @@
 		2B85C1E82590EAE30033D4F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B85C1EB2590EAE30033D4F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B85C1ED2590EAE30033D4F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BDD48DE25990AEB005A5129 /* CruiseUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CruiseUser+CoreDataClass.swift"; path = "/Users/ibukunoluwa/Documents/Code/DeuxCruise/DeuxCruise/CruiseUser+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		2BDD48DF25990AEB005A5129 /* CruiseUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CruiseUser+CoreDataProperties.swift"; path = "/Users/ibukunoluwa/Documents/Code/DeuxCruise/DeuxCruise/CruiseUser+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		2BF2B022259685CF00D21AB2 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		2BF2B023259685CF00D21AB2 /* AnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
 		899EE769F76A3650698626AF /* Pods-DeuxCruise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeuxCruise.debug.xcconfig"; path = "Target Support Files/Pods-DeuxCruise/Pods-DeuxCruise.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,18 +73,52 @@
 		2B85C1DB2590EADF0033D4F8 /* DeuxCruise */ = {
 			isa = PBXGroup;
 			children = (
+				2BDD48E7259923EF005A5129 /* Resources */,
+				2BDD48E6259923E6005A5129 /* Model */,
+				2BDD48E4259923D9005A5129 /* Controller */,
+				2BDD48E3259923CF005A5129 /* View */,
 				2B85C1DC2590EADF0033D4F8 /* AppDelegate.swift */,
 				2B85C1DE2590EADF0033D4F8 /* SceneDelegate.swift */,
-				2B85C1E02590EADF0033D4F8 /* ViewController.swift */,
-				2B85C1E22590EADF0033D4F8 /* Main.storyboard */,
-				2B85C1E82590EAE30033D4F8 /* Assets.xcassets */,
-				2B85C1EA2590EAE30033D4F8 /* LaunchScreen.storyboard */,
 				2B85C1ED2590EAE30033D4F8 /* Info.plist */,
-				2B85C1E52590EADF0033D4F8 /* DeuxCruise.xcdatamodeld */,
-				2BF2B022259685CF00D21AB2 /* AnimationViewController.swift */,
-				2BF2B023259685CF00D21AB2 /* AnimationViewController.xib */,
 			);
 			path = DeuxCruise;
+			sourceTree = "<group>";
+		};
+		2BDD48E3259923CF005A5129 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BDD48E4259923D9005A5129 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B85C1E02590EADF0033D4F8 /* ViewController.swift */,
+				2BF2B022259685CF00D21AB2 /* AnimationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2BDD48E6259923E6005A5129 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BDD48DE25990AEB005A5129 /* CruiseUser+CoreDataClass.swift */,
+				2BDD48DF25990AEB005A5129 /* CruiseUser+CoreDataProperties.swift */,
+				2B85C1E52590EADF0033D4F8 /* DeuxCruise.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BDD48E7259923EF005A5129 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B85C1E82590EAE30033D4F8 /* Assets.xcassets */,
+				2B85C1E22590EADF0033D4F8 /* Main.storyboard */,
+				2B85C1EA2590EAE30033D4F8 /* LaunchScreen.storyboard */,
+				2BF2B023259685CF00D21AB2 /* AnimationViewController.xib */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		4DD24FA97910208535E645B0 /* Frameworks */ = {
@@ -218,6 +256,8 @@
 				2B85C1E72590EADF0033D4F8 /* DeuxCruise.xcdatamodeld in Sources */,
 				2B85C1E12590EADF0033D4F8 /* ViewController.swift in Sources */,
 				2BF2B024259685CF00D21AB2 /* AnimationViewController.swift in Sources */,
+				2BDD48E025990AEB005A5129 /* CruiseUser+CoreDataClass.swift in Sources */,
+				2BDD48E125990AEB005A5129 /* CruiseUser+CoreDataProperties.swift in Sources */,
 				2B85C1DD2590EADF0033D4F8 /* AppDelegate.swift in Sources */,
 				2B85C1DF2590EADF0033D4F8 /* SceneDelegate.swift in Sources */,
 			);

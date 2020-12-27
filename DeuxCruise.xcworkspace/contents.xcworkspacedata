@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/ibukunoluwa/Documents/Code/DeuxCruise/DeuxCruise/CruiseUser+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/ibukunoluwa/Documents/Code/DeuxCruise/DeuxCruise/CruiseUser+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:DeuxCruise.xcodeproj">
    </FileRef>
    <FileRef

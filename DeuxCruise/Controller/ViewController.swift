@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtPassword: MDCOutlinedTextField!
     @IBOutlet weak var txtConfirmPassword: MDCOutlinedTextField!
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     let validator = Validator()
     
     var array_text_fields: [MDCOutlinedTextField] {
@@ -41,8 +44,6 @@ class ViewController: UIViewController {
         validator.registerField(textField: txtPassword, errorLabel: txtPassword.leadingAssistiveLabel, rules: [RequiredRule(), PasswordRule()])
         validator.registerField(textField: txtConfirmPassword, errorLabel: txtConfirmPassword.leadingAssistiveLabel, rules: [RequiredRule(), ConfirmationRule.init(confirmField: txtPassword)])
 
-        self.navigationController?.pushViewController(AnimationViewController(nibName: "AnimationViewController", bundle: nil), animated: true)
-
         // Do any additional setup after loading the view.
     }
     
@@ -55,6 +56,11 @@ class ViewController: UIViewController {
     
     @IBAction func btnSignUpPressed(_ sender: Any) {
         validator.validate(delegate: self)
+        
+        
+        
+        
+        
     }
     
 
@@ -63,6 +69,19 @@ class ViewController: UIViewController {
 extension ViewController: ValidationDelegate{
     
     func validationSuccessful() {
+        
+        guard let firstname = txtFirstname.text, let lastname = txtLastname.text, let username = txtUsername.text, let password = txtPassword.text else {
+            return
+        }
+        
+        
+        let singleUser = CruiseUser(entity: CruiseUser.entity(), insertInto: context)
+        singleUser.firstname = firstname
+        singleUser.lastname = lastname
+        singleUser.password = password
+        singleUser.username = username
+        appDelegate.saveContext()
+        
         self.navigationController?.pushViewController(AnimationViewController(nibName: "AnimationViewController", bundle: nil), animated: true)
     }
     
